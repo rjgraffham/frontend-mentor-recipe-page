@@ -15,6 +15,7 @@
   --font-outfit-med-semibold: 600 20px/1 "Outfit", sans-serif;
   --font-outfit-reg-bold: 700 16px/1.5 "Outfit", sans-serif;
   --font-outfit-reg: 400 16px/1.5 "Outfit", sans-serif;
+  --spacing-xl: 120px;
   --spacing-lrg: 40px;
   --spacing-med: 30px;
   --radius-lrg: 20px;
@@ -44,4 +45,32 @@
   --font-table-data: var(--font-outfit-reg-bold);
   --colors-table-data: var(--colors-brown-800);
   --colors-divider: var(--colors-stone-150);
+  --spacing-main: 0;
+  --max-width-main: 100%;
+
+  @media screen and (width >= 960px) {
+    --spacing-main: var(--spacing-xl);
+    --max-width-main: calc(960px - (2 * var(--spacing-main)));
+  }
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100dvw;
+  min-height: 100dvh;
+  background-color: var(--colors-backdrop);
+  font: var(--font-base);
+}
+
+body {
+  margin: var(--spacing-main) auto 0;
+  padding: 0;
+  width: 100%;
+  max-width: var(--max-width-main);
+  background-color: var(--colors-base-bg);
+}
+
+img {
+  max-width: 100%;
 }
