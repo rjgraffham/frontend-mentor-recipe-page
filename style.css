@@ -47,10 +47,14 @@
   --colors-divider: var(--colors-stone-150);
   --spacing-main: 0;
   --max-width-main: 100%;
+  --padding-hero: 0;
+  --hero-column: full-width;
 
   @media screen and (width >= 960px) {
     --spacing-main: var(--spacing-xl);
     --max-width-main: calc(960px - (2 * var(--spacing-main)));
+    --padding-hero: var(--padding-base);
+    --hero-column: content;
   }
 }
 
@@ -69,8 +73,26 @@ body {
   width: 100%;
   max-width: var(--max-width-main);
   background-color: var(--colors-base-bg);
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    var(--padding-base)
+    [content-start]
+    auto
+    [content-end]
+    var(--padding-base)
+    [full-width-end];
+}
+
+main {
+  grid-column: content;
 }
 
 img {
   max-width: 100%;
+}
+
+.hero {
+  padding: var(--padding-hero) 0 0;
+  grid-column: var(--hero-column);
 }
