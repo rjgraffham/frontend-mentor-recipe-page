@@ -27,8 +27,7 @@
   --colors-base-bg: var(--colors-white);
   --colors-base-fg: var(--colors-stone-600);
   --padding-base: var(--spacing-lrg);
-  --radius-base: var(--radius-lrg);
-  --radius-illustration: var(--radius-med);
+  --radius-base: 0;
   --font-strong: var(--font-outfit-reg-bold);
   --font-heading: var(--font-young-serif-lrg);
   --colors-heading-fg: var(--colors-stone-900);
@@ -48,6 +47,7 @@
   --spacing-main: 0;
   --max-width-main: 100%;
   --padding-hero: 0;
+  --radius-hero: 0;
   --hero-column: full-width;
 
   @media screen and (width >= 960px) {
@@ -55,6 +55,8 @@
     --max-width-main: calc(960px - (2 * var(--spacing-main)));
     --padding-hero: var(--padding-base);
     --hero-column: content;
+    --radius-base: var(--radius-lrg);
+    --radius-hero: var(--radius-med);
   }
 }
 
@@ -68,11 +70,12 @@ html {
 }
 
 body {
-  margin: var(--spacing-main) auto 0;
+  margin: var(--spacing-main) auto;
   padding: 0;
   width: 100%;
   max-width: var(--max-width-main);
   background-color: var(--colors-base-bg);
+  border-radius: var(--radius-base);
   display: grid;
   grid-template-columns:
     [full-width-start]
@@ -95,4 +98,13 @@ img {
 .hero {
   padding: var(--padding-hero) 0 0;
   grid-column: var(--hero-column);
+
+  img {
+    border-radius: var(--radius-hero);
+  }
+}
+
+.attribution {
+  grid-column: content;
+  padding: var(--padding-base);
 }
