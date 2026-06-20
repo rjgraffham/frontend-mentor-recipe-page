@@ -120,6 +120,16 @@ ul {
   }
 }
 
+aside,
+section {
+  margin-top: 2.5rem;
+}
+
+section + section {
+  border-top: 1px solid var(--colors-divider);
+  padding-top: 0.5rem;
+}
+
 .hero {
   padding: var(--padding-hero) 0 0;
   grid-column: var(--hero-column);
