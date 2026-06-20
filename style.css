@@ -106,7 +106,8 @@ h2 {
   font: var(--font-section-heading);
 }
 
-ul {
+ul,
+ol {
   padding-left: 1.5rem;
 
   li {
@@ -115,9 +116,16 @@ ul {
   }
 
   li::marker {
-    font-size: 0.75em;
     color: var(--colors-list-point);
   }
+}
+
+ul li::marker {
+  font-size: 0.75em;
+}
+
+ol li::marker {
+  font: var(--font-list-point);
 }
 
 aside,
