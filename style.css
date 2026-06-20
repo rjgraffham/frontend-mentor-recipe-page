@@ -112,7 +112,7 @@ ol {
 
   li {
     padding-inline-start: 1rem;
-    margin-top: 0.5rem;
+    margin-block-start: 0.5rem;
   }
 
   li::marker {
@@ -130,12 +130,12 @@ ol li::marker {
 
 aside,
 section {
-  margin-top: 2.5rem;
+  margin-block-start: 2.5rem;
 }
 
 section + section {
-  border-top: 1px solid var(--colors-divider);
-  padding-top: 0.5rem;
+  border-block-start: 1px solid var(--colors-divider);
+  padding-block-start: 0.5rem;
 }
 
 table {
@@ -156,7 +156,7 @@ tr {
 
   + tr {
     td {
-      border-top: 1px solid var(--colors-divider);
+      border-block-start: 1px solid var(--colors-divider);
     }
   }
 }
@@ -182,7 +182,7 @@ tr {
   }
 
   ul {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
