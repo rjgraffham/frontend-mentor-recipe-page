@@ -67,6 +67,7 @@ html {
   min-height: 100dvh;
   background-color: var(--colors-backdrop);
   font: var(--font-base);
+  color: var(--colors-base-fg);
 }
 
 body {
@@ -95,12 +96,44 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  color: var(--colors-heading-fg);
+  font: var(--font-heading);
+}
+
+h2 {
+  color: var(--colors-section-heading-fg);
+  font: var(--font-section-heading);
+}
+
 .hero {
   padding: var(--padding-hero) 0 0;
   grid-column: var(--hero-column);
 
   img {
     border-radius: var(--radius-hero);
+  }
+}
+
+.preparation {
+  background-color: var(--colors-aside-bg);
+  border-radius: var(--radius-aside);
+  padding: var(--padding-aside);
+
+  h2 {
+    margin: 0;
+    color: var(--colors-aside-heading-fg);
+    font: var(--font-aside-heading);
+  }
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+  }
+
+  li::marker {
+    font-size: 0.75em;
+    color: var(--colors-list-point);
   }
 }
 
