@@ -108,10 +108,10 @@ h2 {
 
 ul,
 ol {
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 
   li {
-    padding-left: 1rem;
+    padding-inline-start: 1rem;
     margin-top: 0.5rem;
   }
 
