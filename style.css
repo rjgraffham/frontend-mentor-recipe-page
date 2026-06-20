@@ -130,6 +130,28 @@ section + section {
   padding-top: 0.5rem;
 }
 
+table {
+  width: 100%;
+}
+
+tr {
+  td {
+    padding: 0.5rem 1.5rem;
+    width: 50%;
+
+    + td {
+      font: var(--font-table-data);
+      color: var(--colors-table-data);
+    }
+  }
+
+  + tr {
+    td {
+      border-top: 1px solid var(--colors-divider);
+    }
+  }
+}
+
 .hero {
   padding: var(--padding-hero) 0 0;
   grid-column: var(--hero-column);
